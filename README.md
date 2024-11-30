@@ -1,6 +1,10 @@
 I made a converter jpg image to ASCII-art on python, i use Pillow
 # How to use?
 use in terminal (console) - python asciiart.py yourimg.jpg
+
+# NEW VERSION
+hey guys, I made a new version of the app, now it uses GTK! I'm using GNOME so it looks cool for me, I'll do it later with Qt
+
 # Bags
 
 1. Traceback (most recent call last):
@@ -10,7 +14,7 @@ use in terminal (console) - python asciiart.py yourimg.jpg
 install the Pillow
 `python3 -m venv myenv`
 `source myenv/bin/activate` (On Linux)
-`pip install pillow`
+`pip install pillow PyGObject`
 
 2. Traceback (most recent call last):
   File "/home/user/asciiart.py", line 49, in <module>
@@ -26,4 +30,7 @@ IndexError: string index out of range
 It seems that the jpg image format is too large (Idk)
 
 # Test
-![изображение](https://github.com/user-attachments/assets/9282fbd5-cc74-48a3-92b5-f5f3225ed7e1)
+
+![изображение](https://github.com/user-attachments/assets/616fd31b-194a-45d7-808e-8ea07857ff2a)
+
+
