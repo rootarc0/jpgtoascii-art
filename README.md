@@ -12,8 +12,11 @@ hey guys, I made a new version of the app, now it uses GTK! I'm using GNOME so i
     from PIL import Image
   
 install the Pillow
+
 `python3 -m venv myenv`
+
 `source myenv/bin/activate` (On Linux)
+
 `pip install pillow PyGObject`
 
 2. Perhaps the ASCII art in the application will be crooked, but if you save it in txt, everything will be fine with it.
