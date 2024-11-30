@@ -16,18 +16,9 @@ install the Pillow
 `source myenv/bin/activate` (On Linux)
 `pip install pillow PyGObject`
 
-2. Traceback (most recent call last):
-  File "/home/user/asciiart.py", line 49, in <module>
-    main(sys.argv[1])
-  File "/home/user/asciiart.py", line 33, in main
-    ascii_str = pixels_to_ascii(image)
-                ^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/superuser/asciiart.py", line 20, in pixels_to_ascii
-    ascii_str += ASCII_CHARS[pixel // 25]  # Разбиваем на 10 уровней яркости
-                 ~~~~~~~~~~~^^^^^^^^^^^^^
-IndexError: string index out of range
+2. Perhaps the ASCII art in the application will be crooked, but if you save it in txt, everything will be fine with it.
 
-It seems that the jpg image format is too large (Idk)
+
 
 # Test
 
