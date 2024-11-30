@@ -6,22 +6,22 @@ from gi.repository import Gtk, Gdk
 
 class ASCIIArtConverter(Gtk.Window):
     def __init__(self):
-        super().__init__(title="Конвертер изображений в ASCII арт")
+        super().__init__(title="Image to ASCII-art")
         self.set_size_request(400, 300)
 
         # Создаем элементы интерфейса
         self.box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6)
         self.add(self.box)
 
-        self.file_chooser = Gtk.FileChooserButton("Выберите изображение", Gtk.FileChooserAction.OPEN)
+        self.file_chooser = Gtk.FileChooserButton("Image", Gtk.FileChooserAction.OPEN)
         self.file_chooser.set_filter(self.create_image_filter())
         self.box.pack_start(self.file_chooser, True, True, 0)
 
-        self.convert_button = Gtk.Button(label="Конвертировать в ASCII")
+        self.convert_button = Gtk.Button(label="Convert to ASCII")
         self.convert_button.connect("clicked", self.on_convert_clicked)
         self.box.pack_start(self.convert_button, True, True, 0)
 
-        self.save_button = Gtk.Button(label="Сохранить ASCII арт")
+        self.save_button = Gtk.Button(label="Save the ASCII art")
         self.save_button.connect("clicked", self.on_save_clicked)
         self.box.pack_start(self.save_button, True, True, 0)
 
@@ -35,7 +35,7 @@ class ASCIIArtConverter(Gtk.Window):
 
     def create_image_filter(self):
         filter = Gtk.FileFilter()
-        filter.set_name("Изображения")
+        filter.set_name("ASCIIarts")
         filter.add_mime_type("image/png")
         filter.add_mime_type("image/jpeg")
         return filter
@@ -74,7 +74,7 @@ class ASCIIArtConverter(Gtk.Window):
         buffer.set_text(ascii_art)
 
     def on_save_clicked(self, widget):
-        dialog = Gtk.FileChooserDialog("Сохранить ASCII арт", self, Gtk.FileChooserAction.SAVE,
+        dialog = Gtk.FileChooserDialog("Save the ASCII art", self, Gtk.FileChooserAction.SAVE,
                                        (Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
                                         Gtk.STOCK_SAVE, Gtk.ResponseType.OK))
         response = dialog.run()
